@@ -1,9 +1,7 @@
 package com.foodapp.model;
 
 
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +16,7 @@ import lombok.ToString;
 public class Customer {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer customerId;
 	private String firstName;
 	private String lastName;
