@@ -13,7 +13,7 @@ import java.util.List;
 @ToString
 @Entity
 public class FoodCart {
-    @Id
+    @Id  
     private Integer cartId;
 
     @OneToOne
