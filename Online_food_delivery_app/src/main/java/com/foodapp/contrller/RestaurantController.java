@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Restaurant;
-import com.foodapp.service.RestaurantService;
 import com.foodapp.serviceImpl.RestaurantServiceImpl;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
