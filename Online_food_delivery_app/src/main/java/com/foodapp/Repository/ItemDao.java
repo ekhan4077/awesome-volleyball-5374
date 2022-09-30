@@ -15,6 +15,6 @@ public interface ItemDao extends JpaRepository<Item, Integer> {
 //	
 //	public List<Item> viewAllItems(Restaurant res) ;
 //	
-	@Query("select i from Item i where i.itemName=?1")
-	 public List<Item> findbyName(String name);
+//	@Query("select i from Item i where i.itemName=?1")
+	 public List<Item> findByitemName(String name);
 }

@@ -121,20 +121,14 @@ public class ItemServiceImpl implements ItemService {
 
 	@Override
 	public List<Item> viewAllItemsByName(String name) throws ItemException {
-		// TODO Auto-generated method stub
-		return null;
+		List<Item> list = iDao.findAll();
+		if(list.size()>0) {
+			return list;
+		}else {
+			throw new ItemException("No item exist with this name "+name);
+		}
+			
 	}
 
-//	@Override
-//	public List<Item> viewAllItemsByName(String name) throws ItemException {
-//		List<Item> items = iDao.findbyName(name);
-//		if(items.size()>0) {
-//			return items;
-//		}else {
-//			throw new ItemException("No Item available with this itemName "+ name);
-//		}
-//		
-//	}
-//	
 	
 }
