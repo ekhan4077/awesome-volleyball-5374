@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Restaurant;
-import com.foodapp.serviceImpl.RestaurantServiceImpl;
+import com.foodapp.service.RestaurantService;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
@@ -23,7 +23,7 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 @RequestMapping("/restaurant")
 public class RestaurantController {
 	@Autowired
-	private RestaurantServiceImpl rImp;
+	private RestaurantService rImp;
 	
 	
 	
@@ -37,7 +37,7 @@ public class RestaurantController {
 		Restaurant getRest = rImp.updateRestaurant(rest);
 		return new ResponseEntity<Restaurant>(getRest,HttpStatus.OK);
 	}
-	@DeleteMapping("/delete")
+	@DeleteMapping("/remove")
 	public ResponseEntity<Restaurant> deleteRestaurent(@RequestBody Restaurant rest) throws RestaurantException{
 		Restaurant getRest = rImp.removeRestaurant(rest);
 		return new ResponseEntity<Restaurant>(getRest,HttpStatus.OK);
@@ -48,7 +48,7 @@ public class RestaurantController {
 		return new ResponseEntity<Restaurant>(getRest,HttpStatus.OK);
 	}
 	
-	@GetMapping("/allbyItemName/{itemName}")
+	@GetMapping("/allbyItem/{itemName}")
 	public ResponseEntity<List<Restaurant>> viewRestaurantsByItemName(@PathVariable("itemName") String ItemName) throws RestaurantException{
 		List<Restaurant> rest =rImp.viewRestaurantsByItemName(ItemName); 	
 		return new ResponseEntity<List<Restaurant>>(rest,HttpStatus.OK);

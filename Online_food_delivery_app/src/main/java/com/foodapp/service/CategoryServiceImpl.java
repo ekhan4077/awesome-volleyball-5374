@@ -1,4 +1,4 @@
-package com.foodapp.ServiceImpl;
+package com.foodapp.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,15 +6,16 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.foodapp.Repository.CategoryDao;
 import com.foodapp.exceptions.CategoryException;
 import com.foodapp.model.Category;
-import com.foodapp.service.CategoryService;
+import com.foodapp.repository.CategoryDao;
 
 @Service
-public class CategoryImpl implements CategoryService {
+public class CategoryServiceImpl implements CategoryService {
+	
 	@Autowired
 	private CategoryDao catService;
+	
 
 	@Override
 	public Category addCategory(Category cat) throws CategoryException {
@@ -27,7 +28,7 @@ public class CategoryImpl implements CategoryService {
 	}
 
 	@Override
-	public Category updateCatrgory(Category cat) throws CategoryException {
+	public Category updateCategory(Category cat) throws CategoryException {
 		Optional<Category> opt = catService.findById(cat.getCatId());
 		if (!opt.isPresent()) {
 			throw new CategoryException("Category Not Exist");
@@ -63,4 +64,5 @@ public class CategoryImpl implements CategoryService {
 		return li;
 	}
 
+	
 }

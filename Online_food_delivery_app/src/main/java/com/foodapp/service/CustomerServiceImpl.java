@@ -1,23 +1,19 @@
-package com.foodapp.serviceImpl;
+package com.foodapp.service;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.foodapp.Repository.CustomerDao;
-import com.foodapp.Repository.RestaurantDao;
 import com.foodapp.exceptions.CustomerException;
-import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Customer;
-import com.foodapp.model.Restaurant;
-import com.foodapp.service.CustomerService;
+import com.foodapp.repository.CustomerDao;
+import com.foodapp.repository.RestaurantDao;
 @Service
 public class CustomerServiceImpl implements CustomerService {
 	@Autowired
 	private CustomerDao cDao;
+	
 	@Autowired
 	private RestaurantDao rDao;
 	

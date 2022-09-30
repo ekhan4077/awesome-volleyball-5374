@@ -1,4 +1,4 @@
-package com.foodapp.ServiceImpl;
+package com.foodapp.service;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -8,17 +8,18 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.foodapp.Repository.BillDao;
 import com.foodapp.exceptions.BillException;
 import com.foodapp.exceptions.CustomerException;
 import com.foodapp.model.Bill;
-import com.foodapp.service.BillService;
+import com.foodapp.repository.BillDao;
 
 @Service
 public class BillServiceImpl implements BillService {
+	
 	@Autowired
 	private BillDao billdao;
 
+	
 	@Override
 	public Bill addBill(Bill bill) throws BillException {
 		Optional<Bill> opt = billdao.findById(bill.getBillId());

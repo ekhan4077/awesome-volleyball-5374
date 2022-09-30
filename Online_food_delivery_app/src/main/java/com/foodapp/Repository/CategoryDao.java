@@ -1,4 +1,4 @@
-package com.foodapp.Repository;
+package com.foodapp.repository;
 
 
 

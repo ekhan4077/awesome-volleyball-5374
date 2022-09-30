@@ -1,20 +1,19 @@
-package com.foodapp.serviceImpl;
+package com.foodapp.service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
-import com.foodapp.Repository.RestaurantDao;
 import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Item;
 import com.foodapp.model.Restaurant;
-import com.foodapp.service.RestaurantService;
+import com.foodapp.repository.RestaurantDao;
 @Service
 public class RestaurantServiceImpl implements RestaurantService{
+	
 	@Autowired
 	private RestaurantDao rDao;
 	

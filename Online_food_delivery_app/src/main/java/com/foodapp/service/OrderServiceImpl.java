@@ -1,4 +1,4 @@
-package com.foodapp.ServiceImpl;
+package com.foodapp.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,20 +6,24 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.foodapp.Repository.OrderDetailsDao;
 import com.foodapp.exceptions.CustomerException;
 import com.foodapp.exceptions.OrderException;
 import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Customer;
 import com.foodapp.model.OrderDetails;
 import com.foodapp.model.Restaurant;
-import com.foodapp.service.OrderService;
+import com.foodapp.repository.CustomerDao;
+import com.foodapp.repository.OrderDetailsDao;
 
 @Service
 
-public class OrderDetailsImpl implements OrderService {
+public class OrderServiceImpl implements OrderService {
    @Autowired
    private OrderDetailsDao orderdao;
+   
+   @Autowired
+   private CustomerDao customerdao;
+   
 	@Override
 	public OrderDetails addOrder(OrderDetails order) throws OrderException {
 		Optional<OrderDetails> opt=orderdao.findById(order.getOrderId());
@@ -58,16 +62,16 @@ public class OrderDetailsImpl implements OrderService {
 	   return opt.get();
 	}
 
-	@Override
-	public List<OrderDetails> viewAllOrders(Restaurant rest) throws OrderException, RestaurantException {
-		
-		return null;
-	}
 
-	@Override
-	public List<OrderDetails> viewAllOrders(Customer customer) throws OrderException, CustomerException {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public List<OrderDetails> viewAllOrders(Integer customerId) throws OrderException, CustomerException {
+//		Optional<Customer> cusOpt = customerdao.findById(customerId);
+//		if(cusOpt.isPresent()) {
+//			Customer customer = cusOpt.get();
+//			
+//		}else {
+//			throw new CustomerException("No Customer exists with Customer Id: "+customerId);
+//		}
+//	}
 
 }

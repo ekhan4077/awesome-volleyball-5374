@@ -1,4 +1,4 @@
-package com.foodapp.serviceImpl;
+package com.foodapp.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,25 +7,26 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.foodapp.Repository.CategoryDao;
-import com.foodapp.Repository.ItemDao;
-import com.foodapp.Repository.RestaurantDao;
 import com.foodapp.exceptions.CategoryException;
 import com.foodapp.exceptions.ItemException;
 import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Category;
 import com.foodapp.model.Item;
 import com.foodapp.model.Restaurant;
-import com.foodapp.service.ItemService;
+import com.foodapp.repository.CategoryDao;
+import com.foodapp.repository.ItemDao;
+import com.foodapp.repository.RestaurantDao;
 
 @Service
 public class ItemServiceImpl implements ItemService {
+	
 	@Autowired
 	private ItemDao iDao;
 	@Autowired
 	private CategoryDao cDao;
 	@Autowired
 	private RestaurantDao rDao;
+	
 
 	@Override
 	public Item addItem(Item item) throws ItemException {

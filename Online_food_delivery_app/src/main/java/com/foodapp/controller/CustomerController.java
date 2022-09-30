@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.foodapp.exceptions.CustomerException;
 import com.foodapp.model.Customer;
-import com.foodapp.serviceImpl.CustomerServiceImpl;
+import com.foodapp.service.CustomerService;
 
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
 	@Autowired
-	private CustomerServiceImpl cImpl;
+	private CustomerService cImpl;
 	
 	@PostMapping("/add")
 	public ResponseEntity<Customer> addCustomer(@RequestBody Customer customer) throws CustomerException {
@@ -33,12 +33,12 @@ public class CustomerController {
 		return new ResponseEntity<Customer>(cust,HttpStatus.CREATED);
 	}
 	
-	@DeleteMapping("/delete")
+	@DeleteMapping("/remove")
 	public ResponseEntity<Customer> deleteCustomer(@RequestBody Customer customer) throws CustomerException {
 		Customer cust = cImpl.removeCustomer(customer);
 		return new ResponseEntity<Customer>(cust,HttpStatus.CREATED);
 	}
-	@GetMapping("view")
+	@GetMapping("/view")
 	public ResponseEntity<Customer> viewCustomer(@RequestBody Customer customer) throws CustomerException {
 		Customer cust = cImpl.viewCustomer(customer);
 		return new ResponseEntity<Customer>(cust,HttpStatus.OK);

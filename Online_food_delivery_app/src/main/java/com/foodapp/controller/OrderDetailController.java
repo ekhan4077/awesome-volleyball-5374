@@ -1,6 +1,5 @@
-package com.foodapp.Controllers;
+package com.foodapp.controller;
 
-import org.hibernate.query.criteria.internal.OrderImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,38 +11,38 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.foodapp.ServiceImpl.OrderDetailsImpl;
 import com.foodapp.exceptions.OrderException;
 import com.foodapp.model.OrderDetails;
+import com.foodapp.service.OrderService;
 
 @RestController
-@RequestMapping("order")
+@RequestMapping("/order")
 
 public class OrderDetailController {
 	@Autowired
-	private OrderDetailsImpl service;
-	@PostMapping("/order")
+	private OrderService service;
+	@PostMapping("/new")
 	public ResponseEntity<OrderDetails> AddOrder(@RequestBody OrderDetails order) throws OrderException{
 		OrderDetails od=service.addOrder(order);
 		return new ResponseEntity<OrderDetails>(od,HttpStatus.CREATED);
 		
 		
 	}
-	@PutMapping("/order")
+	@PutMapping("/update")
 	public ResponseEntity<OrderDetails>updateOrder(@RequestBody OrderDetails order) throws OrderException{
 		OrderDetails od=service.updateOrder(order);
 		return new ResponseEntity<OrderDetails>(od,HttpStatus.CREATED);
 		
 		
 	}
-	@DeleteMapping("/order")
+	@DeleteMapping("/remove")
 	public ResponseEntity<OrderDetails>DeleteOrder(@RequestBody OrderDetails order) throws OrderException{
 		OrderDetails od=service.removeOrder(order);
 		return new ResponseEntity<OrderDetails>(od,HttpStatus.CREATED);
 		
 		
 	}
-	@GetMapping("/order")
+	@GetMapping("/view")
 	public ResponseEntity<OrderDetails>viewOrder(@RequestBody OrderDetails order) throws OrderException{
 		OrderDetails od=service.viewOrder(order);
 		return new ResponseEntity<OrderDetails>(od,HttpStatus.CREATED);

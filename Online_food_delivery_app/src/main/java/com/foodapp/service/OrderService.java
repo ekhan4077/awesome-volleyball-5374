@@ -20,9 +20,9 @@ public interface OrderService {
 	
 	public OrderDetails viewOrder(OrderDetails order) throws OrderException;
 	
-	public List<OrderDetails> viewAllOrders(Restaurant rest) throws OrderException,RestaurantException;
+	//public List<OrderDetails> viewAllOrders(Restaurant rest) throws OrderException,RestaurantException;
 	
-	public List<OrderDetails> viewAllOrders(Customer customer) throws OrderException,CustomerException;
+	//public List<OrderDetails> viewAllOrders(Integer customerId) throws OrderException,CustomerException;
 	
 	
 	
