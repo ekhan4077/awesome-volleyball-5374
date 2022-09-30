@@ -65,6 +65,9 @@ public class BillServiceImpl implements BillService {
 	@Override
 	public List<Bill> viewBills(LocalDate startDate, LocalDate endDate) throws BillException {
     List<Bill> li=billdao.findAll();
+    if(li.size()==0) {
+    	throw new BillException("there is no Bill between the  given Date");
+    }
     List<Bill> list=new ArrayList<>();
 		for(Bill b:li) {
 			if(startDate.isAfter(LocalDate.from(b.getBillDate()))&&endDate.isBefore(LocalDate.from(b.getBillDate()))) {

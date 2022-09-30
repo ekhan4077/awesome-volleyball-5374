@@ -20,11 +20,11 @@ import com.foodapp.service.CartService;
 public class FoodCartController {
 	@Autowired
 	private CartServiceImpl service;
-	@PostMapping("add")
-	public ResponseEntity<FoodCart> AddItemToCart(@RequestBody Object[] li){
+	@PostMapping(" /add")
+	public FoodCart AddItemToCart(@RequestBody FoodCart fc,@RequestBody Item item){
 		
 
-     return null;
+     return fc;
 		
 	}
 	

@@ -23,7 +23,7 @@ public class CartServiceImpl implements CartService{
 			throw new CartException("Cart not Found");
 		}
 		opt.get().getItemList().add(item);
-		myCart.save(cart);
+
 		return myCart.save(cart);
 	}
 
