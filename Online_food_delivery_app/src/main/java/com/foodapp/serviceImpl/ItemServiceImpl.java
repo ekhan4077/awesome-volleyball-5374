@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.foodapp.Repository.CategoryDao;
 import com.foodapp.Repository.ItemDao;
+import com.foodapp.Repository.RestaurantDao;
 import com.foodapp.exceptions.CategoryException;
 import com.foodapp.exceptions.ItemException;
 import com.foodapp.exceptions.RestaurantException;
@@ -23,6 +24,8 @@ public class ItemServiceImpl implements ItemService {
 	private ItemDao iDao;
 	@Autowired
 	private CategoryDao cDao;
+	@Autowired
+	private RestaurantDao rDao;
 
 	@Override
 	public Item addItem(Item item) throws ItemException {
@@ -71,21 +74,13 @@ public class ItemServiceImpl implements ItemService {
 			List<Item> items = iDao.findAll();
 			if(items.size()>0) {
 				List<Item> catitem = new ArrayList<>();
-	//			for(int i=0; i<items.size(); i++) {
-	//				if(items.get(i).getCategory().equals(cat)) {
-	//					catitem.add(items.get(i));
-	//				}
-				//}
+
 				for(Item it:items) {
 					if(cat.getCatId()== it.getCategory().getCatId()) {
 						catitem.add(it);
 					}
 				}
-//				if(catitem.size()>0) {
-//					return catitem;
-//				}else {
-//					throw new CategoryException();
-//				}
+
 				return catitem;
 			}else {
 				throw new ItemException();
@@ -98,30 +93,30 @@ public class ItemServiceImpl implements ItemService {
 
 	@Override
 	public List<Item> viewAllItems(Restaurant rest) throws ItemException, RestaurantException {
-//		List<Item> items = iDao.findAll();
-//		if(items.size()>0) {
-//			List<Item> restItem= new ArrayList<>();
-//			
-////				for(int i=0; i<items.size(); i++) {
-////					if((items.get(i).getRestaurant()).equals(rest) ){
-////						restItem.add(items.get(i));
-////					}
-////				}
-//			
-//			for(Item it: items) {
-//				for(Restaurant )
-//				
-//				
-//			}
-//			
-//			
-//			
-//			
-//			return restItem;
-//		}else {
-//			throw new RestaurantException("No Resturesnt exist with this resturant Id "+ rest.getRestaurantId());
-//		}
-		return null;
+		Optional<Restaurant> opt = rDao.findById(rest.getRestaurantId());
+		if(opt.isPresent()) {
+			List<Item> items = iDao.findAll();
+			
+			if(items.size()>0) {
+				List<Item> restItem= new ArrayList<>();
+				for(Item it: items) {
+					List<Restaurant> restList = it.getRestaurant(); 
+					
+					for(Restaurant itb: restList) {
+						if(itb.getRestaurantId()==rest.getRestaurantId()) {
+							restItem.add(it);
+						}
+					}
+					
+					
+				}
+				return restItem;
+			}else {
+				throw new RestaurantException("No Resturesnt exist with this resturant Id "+ rest.getRestaurantId());
+			}
+		}else{
+			throw new RestaurantException("No Resturesnt exist with this resturant Id "+ rest.getRestaurantId());
+		}
 	}
 
 	@Override

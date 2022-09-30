@@ -8,6 +8,8 @@ import lombok.*;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -22,10 +24,12 @@ public class Restaurant {
     private String restaurantName;
     private String managerName;
     private String contactNumber;
-
+    
+   
     @Embedded
     private Address address;
 
+    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Item> itemLists;
 }

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.foodapp.Repository.CustomerDao;
+import com.foodapp.Repository.RestaurantDao;
 import com.foodapp.exceptions.CustomerException;
 import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Customer;
@@ -17,6 +18,8 @@ import com.foodapp.service.CustomerService;
 public class CustomerServiceImpl implements CustomerService {
 	@Autowired
 	private CustomerDao cDao;
+	@Autowired
+	private RestaurantDao rDao;
 	
 	@Override
 	public Customer addCustomer(Customer customer) throws CustomerException {
@@ -58,18 +61,19 @@ public class CustomerServiceImpl implements CustomerService {
 		
 	}
 
-	@Override
-	public List<Customer> viewAllCustomers(Restaurant rest) throws CustomerException, RestaurantException {
-			List<Customer> list =cDao.findAll();
-			
-			List<Customer> anslist = new ArrayList<>();
-//			for(int i=0; i<list.size(); i++) {
-//				if(list.get(i).getRestaurant().equals(rest)) {
-//					anslist.add(list.get(i));
-//				}
-//			}
-			return anslist;
-			
-	}
+//	@Override
+//	public List<Customer> viewAllCustomers(Restaurant rest) throws CustomerException, RestaurantException {
+//			List<Customer> list =cDao.findAll();
+//			//Restaurant restu =rDao.getById(rest.getRestaurantId()) we can get it from food cart;
+//	
+//			List<Customer> anslist = new ArrayList<>();
+////			for(int i=0; i<list.size(); i++) {
+////				if(list.get(i).getRestaurant().equals(rest)) {
+////					anslist.add(list.get(i));
+////				}
+////			}
+//			return anslist;
+//			
+//	}
 		
 }

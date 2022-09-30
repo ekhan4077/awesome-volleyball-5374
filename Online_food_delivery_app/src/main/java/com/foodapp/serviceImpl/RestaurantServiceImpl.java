@@ -70,7 +70,7 @@ public class RestaurantServiceImpl implements RestaurantService{
 		if(rests.size()>0) {
 			List<Restaurant> restLoc = new ArrayList<Restaurant>();
 			for(int i=0; i<rests.size(); i++) {
-				if(rests.get(i).getAddress().getArea().equals(location)) {
+				if(rests.get(i).getAddress().getCity().equals(location)) {
 					restLoc.add(rests.get(i));
 				}
 			}
