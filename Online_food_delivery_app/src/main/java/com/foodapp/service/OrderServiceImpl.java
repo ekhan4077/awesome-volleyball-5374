@@ -12,17 +12,16 @@ import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Customer;
 import com.foodapp.model.OrderDetails;
 import com.foodapp.model.Restaurant;
-import com.foodapp.repository.CustomerDao;
-import com.foodapp.repository.OrderDetailsDao;
+
 
 @Service
 
 public class OrderServiceImpl implements OrderService {
    @Autowired
-   private OrderDetailsDao orderdao;
+   private com.foodapp.Repository.OrderDetailsDao orderdao;
    
    @Autowired
-   private CustomerDao customerdao;
+   private com.foodapp.Repository.CustomerDao customerdao;
    
 	@Override
 	public OrderDetails addOrder(OrderDetails order) throws OrderException {

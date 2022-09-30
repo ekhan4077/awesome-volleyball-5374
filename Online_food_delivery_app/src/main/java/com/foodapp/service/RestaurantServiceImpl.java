@@ -10,12 +10,12 @@ import org.springframework.stereotype.Service;
 import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Item;
 import com.foodapp.model.Restaurant;
-import com.foodapp.repository.RestaurantDao;
+
 @Service
 public class RestaurantServiceImpl implements RestaurantService{
 	
 	@Autowired
-	private RestaurantDao rDao;
+	private com.foodapp.Repository.RestaurantDao rDao;
 	
 	@Override
 	public Restaurant addRestaurant(Restaurant rest) throws RestaurantException {

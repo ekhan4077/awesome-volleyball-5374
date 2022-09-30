@@ -13,19 +13,17 @@ import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Category;
 import com.foodapp.model.Item;
 import com.foodapp.model.Restaurant;
-import com.foodapp.repository.CategoryDao;
-import com.foodapp.repository.ItemDao;
-import com.foodapp.repository.RestaurantDao;
+
 
 @Service
 public class ItemServiceImpl implements ItemService {
 	
 	@Autowired
-	private ItemDao iDao;
+	private com.foodapp.Repository.ItemDao iDao;
 	@Autowired
-	private CategoryDao cDao;
+	private com.foodapp.Repository.CategoryDao cDao;
 	@Autowired
-	private RestaurantDao rDao;
+	private com.foodapp.Repository.RestaurantDao rDao;
 	
 
 	@Override

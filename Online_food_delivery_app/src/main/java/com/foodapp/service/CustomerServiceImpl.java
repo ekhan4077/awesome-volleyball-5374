@@ -7,15 +7,14 @@ import org.springframework.stereotype.Service;
 
 import com.foodapp.exceptions.CustomerException;
 import com.foodapp.model.Customer;
-import com.foodapp.repository.CustomerDao;
-import com.foodapp.repository.RestaurantDao;
+
 @Service
 public class CustomerServiceImpl implements CustomerService {
 	@Autowired
-	private CustomerDao cDao;
+	private com.foodapp.Repository.CustomerDao cDao;
 	
 	@Autowired
-	private RestaurantDao rDao;
+	private com.foodapp.Repository.RestaurantDao rDao;
 	
 	@Override
 	public Customer addCustomer(Customer customer) throws CustomerException {

@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 
 import com.foodapp.exceptions.CategoryException;
 import com.foodapp.model.Category;
-import com.foodapp.repository.CategoryDao;
+
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
 	
 	@Autowired
-	private CategoryDao catService;
+	private com.foodapp.Repository.CategoryDao catService;
 	
 
 	@Override

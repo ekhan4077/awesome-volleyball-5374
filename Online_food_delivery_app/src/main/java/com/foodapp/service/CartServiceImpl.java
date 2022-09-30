@@ -11,16 +11,15 @@ import com.foodapp.exceptions.CartException;
 import com.foodapp.exceptions.ItemException;
 import com.foodapp.model.FoodCart;
 import com.foodapp.model.Item;
-import com.foodapp.repository.FoodCartDao;
-import com.foodapp.repository.ItemDao;
+
 @Service
 public class CartServiceImpl implements CartService{
 	
 	@Autowired
-	private FoodCartDao cartDao;
+	private com.foodapp.Repository.FoodCartDao cartDao;
 	
 	@Autowired
-	private ItemDao itemDao;
+	private com.foodapp.Repository.ItemDao itemDao;
 	
 	
 	@Override
