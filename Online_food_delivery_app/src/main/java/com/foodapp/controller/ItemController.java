@@ -20,14 +20,14 @@ import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Category;
 import com.foodapp.model.Item;
 import com.foodapp.model.Restaurant;
-import com.foodapp.serviceImpl.ItemServiceImpl;
+import com.foodapp.service.ItemService;
 
 @RestController
 @RequestMapping("/item")
 public class ItemController {
 	
 	@Autowired
-	private ItemServiceImpl iimpl;
+	private ItemService iimpl;
 	
 	@PostMapping("/add")
 	public ResponseEntity<Item> addItem(@RequestBody Item item) throws ItemException{
@@ -35,31 +35,31 @@ public class ItemController {
 		return new ResponseEntity<Item>(it,HttpStatus.CREATED);
 	}
 	
-	@PutMapping("/delete")
+	@PutMapping("/update")
 	public ResponseEntity<Item> UpdateItem(@RequestBody Item item) throws ItemException{
 		Item it = iimpl.updateItem(item);
 		return new ResponseEntity<Item>(it,HttpStatus.OK);
 	}
 	
-	@DeleteMapping("/dalete")
+	@DeleteMapping("/remove")
 	public ResponseEntity<Item> deleteItem( @RequestBody Item item)throws ItemException{
 		Item it = iimpl.removeItem(item);
 		return new ResponseEntity<Item>(it,HttpStatus.OK);
 	}
 	
-	@PostMapping("/ByCategory")
+	@PostMapping("/viewByCategory")
 	public ResponseEntity<List<Item>> viewAllItem(@RequestBody Category cat) throws ItemException, CategoryException{
 		List<Item> list = iimpl.viewAllItems(cat);
 		return new ResponseEntity<List<Item>>(list,HttpStatus.FOUND);
 	}
 	
-	@PostMapping("/allItemsOfRestaurant")
+	@PostMapping("/viewByRestaurant")
 	public ResponseEntity<List<Item>> viewAllItems(@RequestBody Restaurant rest) throws ItemException, CategoryException, RestaurantException{
 		List<Item> list = iimpl.viewAllItems(rest);
 		return new ResponseEntity<List<Item>>(list,HttpStatus.FOUND);
 	}
 	
-	@GetMapping("/ByName/{name}")
+	@GetMapping("/viewByName/{name}")
 	public ResponseEntity<List<Item>> viewAllItemsByName(@PathVariable("name") String name ) throws ItemException, CategoryException, RestaurantException{
 		List<Item> list = iimpl.viewAllItemsByName(name);
 		return new ResponseEntity<List<Item>>(list,HttpStatus.FOUND);

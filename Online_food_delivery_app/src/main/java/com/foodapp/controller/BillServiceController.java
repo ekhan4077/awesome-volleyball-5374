@@ -1,4 +1,4 @@
-package com.foodapp.Controllers;
+package com.foodapp.controller;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -16,47 +16,46 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
-import com.foodapp.ServiceImpl.BillServiceImpl;
 import com.foodapp.exceptions.BillException;
 import com.foodapp.exceptions.CustomerException;
 import com.foodapp.model.Bill;
+import com.foodapp.service.BillService;
 
 @RestController
-@RequestMapping("bill")
+@RequestMapping("/bill")
 public class BillServiceController {
 	@Autowired
-	private BillServiceImpl service;
+	private BillService service;
 
-	@PostMapping("/bill")
+	@PostMapping("/add")
 	public ResponseEntity<Bill> generateBill(@RequestBody Bill bill) throws BillException {
 		Bill myBill = service.addBill(bill);
 		return new ResponseEntity<Bill>(myBill, HttpStatus.CREATED);
 
 	}
 
-	@PutMapping("/bill")
+	@PutMapping("/update")
 	public ResponseEntity<Bill> UpdateBill(@RequestBody Bill bill) throws BillException {
 		Bill myBill = service.updateBill(bill);
 		return new ResponseEntity<Bill>(myBill, HttpStatus.ACCEPTED);
 
 	}
 
-	@DeleteMapping("/bill")
+	@DeleteMapping("/remove")
 	public ResponseEntity<Bill> DeleteBill(@RequestBody Bill bill) throws BillException {
 		Bill myBill = service.removeBill(bill);
 		return new ResponseEntity<Bill>(myBill, HttpStatus.ACCEPTED);
 
 	}
 
-	@GetMapping("/bill1")
+	@GetMapping("/view")
 	public ResponseEntity<Bill> viewBill(@RequestBody Bill bill) throws BillException, CustomerException {
 		Bill myBill = service.viewBill(bill);
 		return new ResponseEntity<Bill>(myBill, HttpStatus.ACCEPTED);
 
 	}
 
-	@GetMapping("/bill/{id}")
+	@GetMapping("/view/{id}")
 	public ResponseEntity<List<Bill>> viewAllBill(@PathVariable("id") Integer id)
 			throws BillException, CustomerException {
 		List<Bill> myBill = service.viewBills(id);
@@ -64,13 +63,13 @@ public class BillServiceController {
 
 	}
 
-	@GetMapping("/bill")
+	@GetMapping("/totalbill")
 	public ResponseEntity<Double> getTotalCost(@RequestBody Bill bill) throws BillException {
 		Double myCost = service.calculateTotalCost(bill);
 		return new ResponseEntity<Double>(myCost, HttpStatus.ACCEPTED);
 
 	}
-	@GetMapping("/bills")
+	@GetMapping("/getbills")
 	public ResponseEntity<List<Bill>> viewBillsBetweenDates(@RequestBody List<String> li) throws BillException {
 		
 		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");

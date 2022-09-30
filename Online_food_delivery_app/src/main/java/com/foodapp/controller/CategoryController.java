@@ -1,4 +1,4 @@
-package com.foodapp.Controllers;
+package com.foodapp.controller;
 
 import java.util.List;
 
@@ -13,15 +13,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.foodapp.ServiceImpl.CategoryImpl;
 import com.foodapp.exceptions.CategoryException;
 import com.foodapp.model.Category;
+import com.foodapp.service.CategoryService;
 
 @RestController
-@RequestMapping("category")
+@RequestMapping("/category")
 public class CategoryController {
+	
 	@Autowired
-	private CategoryImpl service;
+	private CategoryService service;
 
 	@PostMapping("/add")
 	public ResponseEntity<Category> addCategory(@RequestBody Category cat) throws CategoryException {
@@ -30,28 +31,28 @@ public class CategoryController {
 
 	}
 
-	@PutMapping("/add")
+	@PutMapping("/update")
 	public ResponseEntity<Category> updateCategory(@RequestBody Category cat) throws CategoryException {
-		Category category = service.updateCatrgory(cat);
+		Category category = service.updateCategory(cat);
 		return new ResponseEntity<Category>(category, HttpStatus.OK);
 
 	}
 
-	@DeleteMapping("/delete")
+	@DeleteMapping("/remove")
 	public ResponseEntity<Category> deleteCategory(@RequestBody Category cat) throws CategoryException {
 		Category category = service.removeCatrgory(cat);
 		return new ResponseEntity<Category>(category, HttpStatus.OK);
 
 	}
 
-	@GetMapping("/get")
+	@GetMapping("/view")
 	public ResponseEntity<Category> viewCategory(@RequestBody Category cat) throws CategoryException {
 		Category category = service.viewCatrgory(cat);
 		return new ResponseEntity<Category>(category, HttpStatus.OK);
 
 	}
 
-	@GetMapping("/getAll")
+	@GetMapping("/viewAll")
 	public ResponseEntity<List<Category>> viewAllCategory() throws CategoryException {
 		List<Category> category = service.viewAllCategory();
 		return new ResponseEntity<List<Category>>(category, HttpStatus.OK);

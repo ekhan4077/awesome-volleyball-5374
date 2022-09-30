@@ -1,4 +1,4 @@
-package com.foodapp.Repository;
+package com.foodapp.repository;
 
 import java.time.LocalDate;
 import java.util.List;
