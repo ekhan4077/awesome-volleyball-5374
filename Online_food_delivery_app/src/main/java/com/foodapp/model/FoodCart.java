@@ -14,7 +14,7 @@ import java.util.List;
 @Entity
 public class FoodCart {
         @Id
-        private Integer cartId;
+    private Integer cartId;
 
     @OneToOne
     private Customer customer;
