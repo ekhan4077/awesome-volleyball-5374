@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57654cc3-fafe-42d8-885b-4c0fd3a7c05b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Online_food_delivery_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Online_food_delivery_app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.foodapp/Online_food_delivery_app/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.foodapp/Online_food_delivery_app/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/OnlineFoodDeliveryAppApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/OnlineFoodDeliveryAppApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/BillDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/BillDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/CategoryDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/CustomerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/CustomerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/FoodCartDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/FoodCartDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/ItemDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/ItemDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/OrderDetailsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/OrderDetailsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/RestaurantDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/Repository/RestaurantDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/controller/BillServiceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/controller/BillServiceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/controller/CategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/controller/FoodCartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/controller/FoodCartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/controller/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/controller/ItemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/controller/OrderDetailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/controller/OrderDetailController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/controller/RestaurantController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/controller/RestaurantController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/BillException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/BillException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/CartException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/CartException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/CategoryException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/CategoryException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/CustomerException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/CustomerException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/ErrorDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/ErrorDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/ItemException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/ItemException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/OrderException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/OrderException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/RestaurantException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/exceptions/RestaurantException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/model/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/model/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/model/Bill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/model/Bill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/model/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/model/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/model/FoodCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/model/FoodCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/model/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/model/OrderDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/model/OrderDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/model/Restaurant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/BillService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/BillService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/BillServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/BillServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/CartService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/CartServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/CategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/CategoryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/CustomerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/ItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/ItemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/ItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/ItemServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/RestaurantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/RestaurantService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodapp/service/RestaurantServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodapp/service/RestaurantServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/foodapp/OnlineFoodDeliveryAppApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/foodapp/OnlineFoodDeliveryAppApplicationTests.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2FUrddsmdMDp8Hd2hvxU3uobocJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="OnlineFoodDeliveryAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Online_food_delivery_app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.foodapp.OnlineFoodDeliveryAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57654cc3-fafe-42d8-885b-4c0fd3a7c05b" name="Changes" comment="" />
+      <created>1664557605755</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664557605755</updated>
+      <workItem from="1664557615735" duration="1868000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
