@@ -1,5 +1,6 @@
 package com.foodapp.auth.controller;
 
+import com.foodapp.auth.models.AdminLogin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,5 +29,11 @@ public class LoginController {
 		return loginService.logOutFromAccount(key);
 	}
 
-	
+	@PostMapping("/adminLogin")
+	public String adminLoginHandler(@RequestBody AdminLogin loginData) { return loginService.LogInAccountAdmin(loginData);}
+
+	@PatchMapping("/adminLogout")
+	public String adminLogoutFromAccount(@RequestBody String key) {
+		return loginService.LogOutFromAccountAdmin(key);
+	}
 }

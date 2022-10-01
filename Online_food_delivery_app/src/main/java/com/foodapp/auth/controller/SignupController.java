@@ -1,5 +1,6 @@
 package com.foodapp.auth.controller;
 
+import com.foodapp.model.Restaurant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,4 +36,23 @@ public class SignupController {
 		
 	
 	}
+
+	@PostMapping("/adminSignUp")
+	public ResponseEntity<Restaurant> createNewSignUpHandlerAdmin(@RequestBody Restaurant newSignUp) {
+
+		Restaurant newSignedUp =signUpService.createNewResSignUp(newSignUp);
+		return new ResponseEntity<Restaurant>(newSignedUp,HttpStatus.CREATED);
+
+	}
+
+	@PutMapping("/adminUpdateSignUp")
+	public ResponseEntity<Restaurant> updateSignUpDetailsHandlerAdmin(@RequestBody Restaurant signUp, @RequestParam String key)
+	{
+		Restaurant newUpdatedSignUp = signUpService.updateResSignUpDetails(signUp,key);
+
+		return new ResponseEntity<Restaurant>(newUpdatedSignUp,HttpStatus.ACCEPTED);
+
+	}
+
+
 }
