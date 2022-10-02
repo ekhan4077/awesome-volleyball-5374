@@ -45,7 +45,7 @@ public class CategoryController {
 
 	}
 
-	@GetMapping("/view")
+	@PostMapping("/view")
 	public ResponseEntity<Category> viewCategory(@RequestBody Category cat) throws CategoryException {
 		Category category = service.viewCatrgory(cat);
 		return new ResponseEntity<Category>(category, HttpStatus.OK);
