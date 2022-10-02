@@ -11,8 +11,8 @@ import com.foodapp.exceptions.CartException;
 import com.foodapp.exceptions.ItemException;
 import com.foodapp.model.FoodCart;
 import com.foodapp.model.Item;
-import com.foodapp.repository.FoodCartDao;
-import com.foodapp.repository.ItemDao;
+import com.foodapp.Repository.*;
+import com.foodapp.Repository.*;
 @Service
 public class CartServiceImpl implements CartService{
 	

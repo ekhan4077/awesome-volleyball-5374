@@ -1,19 +1,15 @@
 package com.foodapp.service;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.foodapp.exceptions.CustomerException;
 import com.foodapp.exceptions.OrderException;
-import com.foodapp.exceptions.RestaurantException;
-import com.foodapp.model.Customer;
+
 import com.foodapp.model.OrderDetails;
-import com.foodapp.model.Restaurant;
-import com.foodapp.repository.CustomerDao;
-import com.foodapp.repository.OrderDetailsDao;
+
+import com.foodapp.Repository.*;
 
 @Service
 

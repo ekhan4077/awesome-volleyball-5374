@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Item;
 import com.foodapp.model.Restaurant;
-import com.foodapp.repository.RestaurantDao;
+import com.foodapp.Repository.*;
 @Service
 public class RestaurantServiceImpl implements RestaurantService{
 	

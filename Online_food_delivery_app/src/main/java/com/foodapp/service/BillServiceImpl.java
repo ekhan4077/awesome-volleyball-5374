@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import com.foodapp.exceptions.BillException;
 import com.foodapp.exceptions.CustomerException;
 import com.foodapp.model.Bill;
-import com.foodapp.repository.BillDao;
+import com.foodapp.Repository.*;
 
 @Service
 public class BillServiceImpl implements BillService {

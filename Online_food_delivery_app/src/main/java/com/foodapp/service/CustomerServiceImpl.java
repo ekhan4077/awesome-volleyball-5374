@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.foodapp.exceptions.CustomerException;
 import com.foodapp.model.Customer;
-import com.foodapp.repository.CustomerDao;
-import com.foodapp.repository.RestaurantDao;
+import com.foodapp.Repository.*;
+
 @Service
 public class CustomerServiceImpl implements CustomerService {
 	@Autowired

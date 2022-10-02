@@ -36,9 +36,9 @@ public class CustomerController {
 	@DeleteMapping("/remove")
 	public ResponseEntity<Customer> deleteCustomer(@RequestBody Customer customer) throws CustomerException {
 		Customer cust = cImpl.removeCustomer(customer);
-		return new ResponseEntity<Customer>(cust,HttpStatus.CREATED);
+		return new ResponseEntity<Customer>(cust,HttpStatus.FOUND);
 	}
-	@GetMapping("/view")
+	@PostMapping("/view")
 	public ResponseEntity<Customer> viewCustomer(@RequestBody Customer customer) throws CustomerException {
 		Customer cust = cImpl.viewCustomer(customer);
 		return new ResponseEntity<Customer>(cust,HttpStatus.OK);

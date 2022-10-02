@@ -42,13 +42,13 @@ public class RestaurantController {
 		Restaurant getRest = rImp.removeRestaurant(rest);
 		return new ResponseEntity<Restaurant>(getRest,HttpStatus.OK);
 	}
-	@GetMapping("/view")
+	@PostMapping("/view")
 	public ResponseEntity<Restaurant> viewRestaurant(@RequestBody Restaurant rest) throws RestaurantException{
 		Restaurant getRest = rImp.viewRestaurant(rest);
 		return new ResponseEntity<Restaurant>(getRest,HttpStatus.OK);
 	}
 	
-	@GetMapping("/allbyItem/{itemName}")
+	@GetMapping("/allItemBy/{itemName}")
 	public ResponseEntity<List<Restaurant>> viewRestaurantsByItemName(@PathVariable("itemName") String ItemName) throws RestaurantException{
 		List<Restaurant> rest =rImp.viewRestaurantsByItemName(ItemName); 	
 		return new ResponseEntity<List<Restaurant>>(rest,HttpStatus.OK);
@@ -57,7 +57,7 @@ public class RestaurantController {
 	@GetMapping("/allnearby/{location}")
 	public ResponseEntity<List<Restaurant>> viewNearbyRestaurants(@PathVariable("location") String location) throws RestaurantException{
 		List<Restaurant> rest =rImp.viewNearbyRestaurants(location);
-		return new ResponseEntity<List<Restaurant>>(rest,HttpStatus.OK);
+		return new ResponseEntity<List<Restaurant>>(rest,HttpStatus.FOUND);
 	}
 	
 }

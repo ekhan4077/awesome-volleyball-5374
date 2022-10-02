@@ -13,9 +13,8 @@ import com.foodapp.exceptions.RestaurantException;
 import com.foodapp.model.Category;
 import com.foodapp.model.Item;
 import com.foodapp.model.Restaurant;
-import com.foodapp.repository.CategoryDao;
-import com.foodapp.repository.ItemDao;
-import com.foodapp.repository.RestaurantDao;
+import com.foodapp.Repository.*;
+
 
 @Service
 public class ItemServiceImpl implements ItemService {
@@ -61,34 +60,38 @@ public class ItemServiceImpl implements ItemService {
 
 	@Override
 	public Item removeItem(Item item) throws ItemException {
-		Item existingItem = iDao.findById(item.getItemId()).orElseThrow(()->(new ItemException("Item does not exist with ItemId : "+item.getItemId())));
-		iDao.delete(existingItem);
-		return existingItem;
+		Optional<Item> opt = iDao.findById(item.getItemId());
+		if(opt.isPresent()) {
+			Item it = opt.get();
+			iDao.delete(it);
+			return it;
+		}else {
+			throw new ItemException("No item exist with this data");
+		}
 		
 	}
 
 	@Override
 	public List<Item> viewAllItems(Category cat) throws ItemException, CategoryException {
-		Optional<Category> cat1 = cDao.findById(cat.getCatId());
-		if(cat1.isPresent()) {
-		
-			List<Item> items = iDao.findAll();
+	
+			List<Category> items = cDao.findAll();
 			if(items.size()>0) {
-				List<Item> catitem = new ArrayList<>();
+				List<Item> catitem =new ArrayList<>();
+				
+				for(Category it:items) {
 
-				for(Item it:items) {
-					if(cat.getCatId()== it.getCategory().getCatId()) {
-						catitem.add(it);
+					if(cat.getCatId()== it.getCatId()) {
+						catitem=it.getIt();
 					}
 				}
-
-				return catitem;
+				if(catitem.size()>0) {
+					return catitem;
+				}else {
+					throw new ItemException("No item exist in this category");
+				}
 			}else {
-				throw new ItemException();
+				throw new ItemException("No category esixt with this category id");
 			}
-		}else {
-			throw new CategoryException();
-		}
 		
 	}
 

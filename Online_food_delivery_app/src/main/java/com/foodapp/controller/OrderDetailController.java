@@ -42,7 +42,7 @@ public class OrderDetailController {
 		
 		
 	}
-	@GetMapping("/view")
+	@PostMapping("/view")
 	public ResponseEntity<OrderDetails>viewOrder(@RequestBody OrderDetails order) throws OrderException{
 		OrderDetails od=service.viewOrder(order);
 		return new ResponseEntity<OrderDetails>(od,HttpStatus.CREATED);
