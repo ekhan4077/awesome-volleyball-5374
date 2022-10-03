@@ -1,15 +1,30 @@
-Food delivery APp is created by me and my team member During cunstruct week.
+# Food Delivery Api
+Food Delivery API create by our team or 5 members during cunstruct week at masia school.
 
-Tech-Stack used:-
- 1.Java
- 2.SpringBoot
- 3.lombok
- 4.MySQL
- 5.Swager UI
- 
- Teammates:-
- 1 Ezaz Khan
- 2 Prajjwal Pal
- 3 Amir Sohil
- 4 Vippin 
- 5 Geeta Prakash
+
+## Authors
+- [Ezaj Khan](https://github.com/ekhan4077)
+- [Prajjwal Pal](https://github.com/9prajjwal)
+- [Aamir Sohail](https://github.com/AamirSohail763)
+- [Geeta Prakash Rana](https://github.com/Geetu-Rana)
+- [Vippin](https://github.com/vipinbrd)
+
+## Module
+
+- Login & Signup
+- Restaurant.
+- Customer
+- Cart 
+- Bill
+
+
+## Tech Stack
+
+- Java
+- SpringBoot
+- MySQL 
+- Lombok 
+- Swagger UI
+## ER Diagram
+
+![ER Diagram](https://github.com/ekhan4077/awesome-volleyball-5374/blob/main/1664802821831.png)
