@@ -7,7 +7,7 @@ Food Delivery API create by our team or 5 members during cunstruct week at masia
 - [Prajjwal Pal](https://github.com/9prajjwal)
 - [Aamir Sohail](https://github.com/AamirSohail763)
 - [Geeta Prakash Rana](https://github.com/Geetu-Rana)
-- [Vippin](https://github.com/vipinbrd)
+- [Vipin](https://github.com/vipinbrd)
 
 ## Module
 
