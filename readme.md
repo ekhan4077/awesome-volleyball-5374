@@ -1,5 +1,5 @@
 # Food Delivery Api
-Food Delivery API create by our team or 5 members during cunstruct week at masai school.
+Food Delivery API was created by our team of 5 members during construct week at Masai school.
 
 
 ## Authors
