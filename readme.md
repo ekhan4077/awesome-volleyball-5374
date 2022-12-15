@@ -3,7 +3,7 @@ Food Delivery API was created by our team of 5 members during construct week at 
 
 
 ## Authors
-- [Ezaj Khan](https://github.com/ekhan4077)
+- [Ejaz Ali Khan](https://github.com/ekhan4077)-Team Lead
 - [Prajjwal Pal](https://github.com/9prajjwal)
 - [Aamir Sohail](https://github.com/AamirSohail763)
 - [Geeta Prakash Rana](https://github.com/Geetu-Rana)
